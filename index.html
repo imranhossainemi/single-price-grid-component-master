@@ -10,39 +10,199 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+    
+    body {
+      max-width: 1440px;
+      min-height: 800px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+      flex-direction: column;
+      background-color: hsla(var(--gray-bule), .8);
+    } 
+
+    :root {
+      --cyan: 179, 62%, 43%;
+      --Br-Yellow: 71, 73%, 54%;
+      --lg-Gray: 204, 43%, 93%;
+      --gray-bule: 218, 22%, 67%;
+    }
+
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+      font-size: 16px;
+      font-family: 'Karla', sans-serif;
+    }
+
+    p {
+      font-weight: 400;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: 700;
+    }
+
+    .price {
+      width: 650px;
+      min-height: 450px;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+      border-radius: 2%;
+      background-color: hsl(0, 0%, 100%);
+    }
+
+    .price .join,
+    .price .signup {
+      width: 100%;
+      height: 50%;
+    }
+
+    .price .join {
+      padding: 40px;
+    }
+
+    .price .join h3 {
+      font-size: 20px;
+      color: hsla(var(--cyan),1);
+      padding: 15px 0;
+    }
+
+    .price .join h5 {
+      color: hsl(var(--Br-Yellow));
+      padding: 10px 0;
+    }
+
+    .price .join p {
+      color: hsl(var(--gray-bule));
+      padding: 5px 0;
+      line-height: 25px;
+    }
+
+    .price .signup {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .price .signup .why,
+    .price .signup .monthly {
+      width: 50%;
+      padding: 20px 40px;
+      color: hsl(var(--lg-Gray));
+      line-height: 24px;
+    }
+
+    .price .signup .monthly {
+      background-color: hsl(var(--cyan));
+      border-bottom-left-radius: 3%;
+    }
+
+    .price .signup .monthly h4,
+    .price .signup .why h4 {
+      padding: 15px 0;
+    }
+
+    .price .signup .monthly p,
+    .price .signup .why p {
+      padding: 5px 0;
+    }
+
+    .price .signup .monthly p span {
+      font-size: 32px;
+      padding-right: 10px;
+      font-weight: 700;
+    }
+
+    .price .signup .monthly button {
+      width: 100%;
+      margin-top: 35px;
+      padding: 15px 0;
+      background-color: hsla(var(--Br-Yellow), .9);
+      color: hsl(var(--lg-Gray));
+      border: none;
+      border-radius: 5px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 0 4px 5px hsla(var(--gray-bule), .2);
+    }
+
+    .price .signup .why {
+      background-color: hsla(var(--cyan),0.87);
+      border-bottom-right-radius: 3%;
+    }
+
+    
+    @media screen and (max-width:750px) {
+      body {
+        max-width: 375px;
+      }
+      
+      .price {
+        margin: 50px 0;
+        width: 350px;
+        border-radius: 10px;
+      }
+
+      .price .signup .why,
+      .price .signup .monthly {
+        width: 100%;
+        border-radius: 0;
+      }
+      .price .signup .why {
+        border-bottom-left-radius: 2%;
+        border-bottom-right-radius: 2%;
+      }
+    }
+
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
-  Join our community
-
-  30-day, hassle-free money back guarantee
-
-  Gain access to our full library of tutorials along with expert code reviews. 
-  Perfect for any developers who are serious about honing their skills.
-
-  Monthly Subscription
-
-  &dollar;29 per month
-
-  Full access for less than &dollar;1 a day
-
-  Sign Up
-
-  Why Us
-
-  Tutorials by industry experts
-  Peer &amp; expert code review
-  Coding exercises
-  Access to our GitHub repos
-  Community forum
-  Flashcard decks
-  New videos every week
-  
+  <section class="price">
+    <section class="join">
+      <h3>Join our community</h3>
+      <h5>30-day, hassle-free money back guarantee</h5>
+      <p> Gain access to our full library of tutorials along with expert code reviews. 
+        Perfect for any developers who are serious about honing their skills.
+      </p>
+    </section>
+    <section class="signup">
+      <div class="monthly">
+        <h4>Monthly Subscription</h4>
+        <p>
+          <span>&dollar;29</span>per month
+        </p>
+        <p>Full access for less than &dollar;1 a day</p>
+        <button type="button">Sign Up</button>
+      </div>
+      <div class="why">
+        <h4>Why Us</h4>
+        <p>
+          Tutorials by industry experts<br/>
+          Peer &amp; expert code review<br/>
+          Coding exercises<br/>
+          Access to our GitHub repos<br/>
+          Community forum<br/>
+          Flashcard decks<br/>
+          New videos every week<br/>
+        </p>
+      </div>
+    </section>
+  </section>
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a rel="noopener" href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
